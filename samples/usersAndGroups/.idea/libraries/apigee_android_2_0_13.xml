@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="apigee-android-2.0.13">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/apigee-android-2.0.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../source/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../source/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
