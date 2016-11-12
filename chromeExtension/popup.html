@@ -1,3 +1,4 @@
+
 <!doctype html>
 <!--
  This page is shown when the extension button is clicked, because the
@@ -19,19 +20,24 @@
         overflow: hidden;
         max-width: 400px;
       }
+      #container{width: 300px;}
+      #search-error-msg{display: none;}
+      #searchinput{margin-left: 10px;}
     </style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
+
+     <script src="jquery-latest.js"></script>
     <script src="popup.js"></script>
   </head>
   <body>
     <div id="status"></div>
     <img id="image-result" hidden>
+    <div id="container">
+      <div id="heading">incepZen</div>
+      <div id="search"><span>Enter word:</span><input id="searchinput"></div>
+      <div id="search-error-msg">Please enter data!</div>
+    </div>
+    
   </body>
 </html>
 

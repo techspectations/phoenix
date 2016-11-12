@@ -3,14 +3,14 @@
   "name": "incepZen",
   "version": "0.1",
   	"background": {
-  	"scripts": ["jquery-latest.js"]
+  	"scripts": ["jquery-latest.js","background.js"]
 	},
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
-      "js": ["jquery-latest.js"]
+      "js": ["jquery-latest.js", "hilitor.js", "content.js"]
     }
   ],
 
@@ -18,4 +18,21 @@
   	"default_icon": "icon.png",
 	"default_popup": "popup.html"
 	},
+
+	  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "windows": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F",
+        "chromeos": "Ctrl+Shift+F",
+        "linux": "Ctrl+Shift+F"
+      }
+    }
+  },
+  "permissions": [
+      "activeTab",
+    "file://*/*",
+    "tabs"
+  ]
 }
