@@ -1,0 +1,1 @@
+curl -s --form-string "token=ah6s7gee3gu6biojokbs64hbz73q8v" --form-string "user=ukn8ci6sdqv9z7yhddd1hte7ezcgqe"  --form-string "html=1" --form-string "title=news heading" --form-string "device=onea2003" --form-string "message=<font color="red">Message</font>" --form-string "priority=1" --form-string "sound=cosmic" https://api.pushover.net/1/messages.json
