@@ -16,10 +16,10 @@ import java.util.EnumSet;
 public class ViralityPredictorApplication extends Application<ViralityPredictorConfiguration> {
 
 
-    private static final String DATA_PATH = "C:\\Users\\athul\\Documents\\nyusocialanalytics\\ViralityApp\\Model_0_1478937647453_0.50.model";
+    private static final String DATA_PATH = "/root/Model_14_0.57.model";
 
     //Location for the Google News vectors (GoogleNews-vectors-negative300.bin)
-    private static final String WORD_VECTORS_PATH = "C:\\Users\\athul\\GoogleNews-vectors-negative300.bin";
+    private static final String WORD_VECTORS_PATH = "/root/GoogleNews-vectors-negative300.bin";
 
     public static ViralityPredictor viralityPredictor;
 

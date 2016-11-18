@@ -47,17 +47,19 @@ public class ViralNewsDatasetIterator implements DataSetIterator {
         this.truncateLength = truncateTweetsToLength;
 
         //Split the data into train and test folder and place them in the data directory
-        Reader csvReader = new FileReader(dataDirectory +  "\\" + (train ? "train" : "test") + "\\" + "news.csv");
+        Reader csvReader = new FileReader(dataDirectory +  "\\" + (train ? "train" : "test") + "\\" + "40kTab.tsv");
 
-        List<CSVRecord> newsList = Lists.newArrayList(CSVFormat.newFormat('`').parse(csvReader));
+        List<CSVRecord> newsList = Lists.newArrayList(CSVFormat.newFormat('\t').parse(csvReader));
 
-        viralNews = newsList.stream().filter(e -> e.get(4).toString().equals("1"))
+        viralNews = newsList.stream().filter(e -> Integer.parseInt(e.get(1)) > 1500)
                 .map(e -> e.get(0).toString())
                 .collect(Collectors.toList()).toArray(new String[0]);
 
-        nonViralNews = newsList.stream().filter(e -> e.get(4).toString().equals("0"))
+        nonViralNews = newsList.stream().filter(e -> Integer.parseInt(e.get(1)) < 1500)
                 .map(e -> e.get(0).toString())
                 .collect(Collectors.toList()).toArray(new String[0]);
+
+
 
         System.out.println("---------------------------------------------");
         System.out.println("ViralCount = " + viralNews.length);
